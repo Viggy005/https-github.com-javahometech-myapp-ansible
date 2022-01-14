@@ -5,4 +5,3 @@
 
      - name: Copy and Execute the script 
        script: /etc/ansible/provision.sh
- ...
