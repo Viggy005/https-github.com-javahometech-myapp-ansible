@@ -1,14 +1,8 @@
 ---
- - hosts: webservers 
-   become: True
- - name: Transfer and execute a script.
-   hosts: webservers
-   become: true
-   tasks:
-     - name: Install Nginx
-       apt: pkg=nginx state=present
-       become_user: root
+- name: Transfer and execute a script.
+  hosts: webaws
+  tasks:
 
-      - name: Copy and Execute the script 
-        script: /etc/ansible/provision.sh
+     - name: Copy and Execute the script 
+       script: /etc/ansible/provision.sh
  ...
