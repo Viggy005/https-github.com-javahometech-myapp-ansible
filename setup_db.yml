@@ -3,14 +3,14 @@
 # update and upgrade the machine
 
 - name: Transfer and execute a script.
-  hosts: webaws
+  hosts: db
   tasks:
 
      - name: Copy and Execute the script
        script: /etc/ansible/provision_update.sh
 
 # host name
-- hosts: webaws
+- hosts: db
   gather_facts: yes
 # gather facts for installation steps
 
@@ -22,7 +22,7 @@
      apt: pkg=mongodb state=present
 
 
-- hosts: webaws
+- hosts: db
   become: true
   tasks:
   - name: Ansible copy file to remote server
