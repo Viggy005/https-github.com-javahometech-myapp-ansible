@@ -1,6 +1,6 @@
 ---
 - name: Transfer and execute a script.
-  hosts: webaws
+  hosts: webservers
   tasks:
 
      - name: Copy and Execute the script 
