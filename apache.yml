@@ -1,8 +1,9 @@
 ---
-- hosts: webservers 
-  become: True
+- name: Transfer and execute a script.
+  hosts: webservers
+  become: true
   tasks:
-    - name: Install Nginx
-      apt: pkg=nginx state=present
-      become_user: root
+
+     - name: Copy and Execute the script 
+       script: /etc/ansible/provision.sh
 ...
